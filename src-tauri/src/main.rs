@@ -2,6 +2,13 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 fn main() {
-    crate::run();
+    tauri::Builder::default()
+        .invoke_handler(tauri::generate_handler![test])
+        .run(tauri::generate_context!())
+        .expect("error while running tauri application");
 }
 
+#[tauri::command]
+fn test() {
+    println!("Deez")
+}
