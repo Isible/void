@@ -6,7 +6,7 @@
 
 <body>
 	<div class="container">
-		<Button size="medium" onclick={invoke('test')}>➕ Create</Button>
+		<Button size="medium">➕ Create</Button>
 		<Button size="medium">❗Clone</Button>
 		<Button size="medium">📂 Open</Button>
 	</div>
